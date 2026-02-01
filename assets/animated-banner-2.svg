@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="320" viewBox="0 0 1200 320">
+  <defs>
+    <linearGradient id="bg2" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#071428"/>
+      <stop offset="60%" stop-color="#0b1020"/>
+      <stop offset="100%" stop-color="#06101c"/>
+    </linearGradient>
+
+    <linearGradient id="accent2" x1="0" x2="1">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="50%" stop-color="#22c55e"/>
+      <stop offset="100%" stop-color="#a855f7"/>
+    </linearGradient>
+
+    <filter id="glow2">
+      <feGaussianBlur stdDeviation="4" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <style>
+      .title { font: 800 42px 'Segoe UI', Arial, sans-serif; fill: #ffffff; }
+      .sub   { font: 500 18px 'Segoe UI', Arial, sans-serif; fill: #cbd5e1; }
+      .mono  { font: 700 16px 'Consolas', 'Courier New', monospace; fill: #e2e8f0; }
+      .chip  { font: 700 14px 'Segoe UI', Arial, sans-serif; fill: #0b1020; }
+      .small { font: 500 13px 'Segoe UI', Arial, sans-serif; fill: #94a3b8; }
+    </style>
+  </defs>
+
+  <rect width="1200" height="320" rx="24" fill="url(#bg2)"/>
+
+  <!-- Header text -->
+  <text x="70" y="90" class="title">Learn Python — Step by Step</text>
+  <text x="70" y="125" class="sub">Lessons • Quizzes • Progress tracking • Android + FastAPI</text>
+
+  <!-- Timeline -->
+  <g transform="translate(70,170)">
+    <rect x="0" y="0" width="1060" height="110" rx="18" fill="#0b1224" stroke="#1f2937"/>
+
+    <!-- line -->
+    <line x1="80" y1="55" x2="980" y2="55" stroke="#1f2937" stroke-width="6" stroke-linecap="round"/>
+    <line x1="80" y1="55" x2="980" y2="55" stroke="url(#accent2)" stroke-width="6" stroke-linecap="round" opacity="0.25"/>
+
+    <!-- moving progress dot -->
+    <circle cx="80" cy="55" r="12" fill="url(#accent2)" filter="url(#glow2)">
+      <animate attributeName="cx" values="80;980;80" dur="4.8s" repeatCount="indefinite"/>
+    </circle>
+
+    <!-- nodes -->
+    <g>
+      <circle cx="140" cy="55" r="22" fill="#0b1020" stroke="#334155" stroke-width="2"/>
+      <text x="140" y="60" text-anchor="middle" class="mono">📚</text>
+      <text x="140" y="95" text-anchor="middle" class="small">Lessons</text>
+    </g>
+
+    <g>
+      <circle cx="520" cy="55" r="22" fill="#0b1020" stroke="#334155" stroke-width="2"/>
+      <text x="520" y="60" text-anchor="middle" class="mono">🧠</text>
+      <text x="520" y="95" text-anchor="middle" class="small">Quiz</text>
+    </g>
+
+    <g>
+      <circle cx="900" cy="55" r="22" fill="#0b1020" stroke="#334155" stroke-width="2"/>
+      <text x="900" y="60" text-anchor="middle" class="mono">📈</text>
+      <text x="900" y="95" text-anchor="middle" class="small">Progress</text>
+    </g>
+  </g>
+
+  <!-- chips -->
+  <g transform="translate(70,30)">
+    <rect x="0" y="0" width="160" height="28" rx="14" fill="url(#accent2)" opacity="0.95"/>
+    <text x="80" y="19" text-anchor="middle" class="chip">Interactive</text>
+
+    <rect x="175" y="0" width="150" height="28" rx="14" fill="#22c55e" opacity="0.85"/>
+    <text x="250" y="19" text-anchor="middle" class="chip">Mobile UI</text>
+
+    <rect x="340" y="0" width="180" height="28" rx="14" fill="#38bdf8" opacity="0.85"/>
+    <text x="430" y="19" text-anchor="middle" class="chip">FastAPI Backend</text>
+  </g>
+
+  <text x="70" y="305" class="small">Author: Abdirov Bakytzhan • Supervisor: Elepbergenova Aigul U.</text>
+</svg>

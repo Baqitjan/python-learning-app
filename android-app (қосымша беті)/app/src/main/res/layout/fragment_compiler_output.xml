@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?android:attr/colorBackground"
+    tools:context=".ui.compiler.CompilerOutputFragment">
+
+    <!-- 1. Жүктелу индикаторы (экранның ортасында) -->
+<ProgressBar
+android:id="@+id/loadingIndicator"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:layout_gravity="center"
+android:visibility="gone"
+tools:visibility="visible"/> <!-- Дизайнды көру үшін -->
+
+    <!-- 2. Нәтижені көрсететін ScrollView -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/outputTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="monospace"
+            android:textColor="?android:attr/textColorPrimary"
+            android:textSize="16sp"
+            android:visibility="visible"
+            tools:text="Status: Success\nOutput: Hello, World!\nRuntime: 0.01 sec" />
+
+    </ScrollView>
+</FrameLayout>

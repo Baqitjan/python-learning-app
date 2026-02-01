@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.example.mobileapp.ui.splash.SplashFragment"
+        android:label="SplashFragment"
+        tools:layout="@layout/fragment_splash">
+
+        <!-- Login экранына өту -->
+        <action
+            android:id="@+id/action_splashFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="true" />
+
+        <!-- Негізгі экранға (Home) өту -->
+        <action
+            android:id="@+id/action_splashFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/nav_graph"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+
+    <!-- Global actions (бұлар өзгеріссіз қалды) -->
+    <action
+        android:id="@+id/action_global_to_chaptersFragment"
+        app:destination="@id/chaptersFragment" />
+    <action
+        android:id="@+id/action_global_to_compilerOutputFragment"
+        app:destination="@+id/compilerOutputFragment" />
+    <action
+        android:id="@+id/action_global_authFragment"
+        app:destination="@id/loginFragment"
+        app:popUpTo="@id/nav_graph"
+        app:popUpToInclusive="true" />
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.mobileapp.ui.auth.LoginFragment"
+        android:label="LoginFragment">
+        <!-- Негізгі экранға (Home) өту -->
+        <action
+            android:id="@+id/action_loginFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/nav_graph"
+            app:popUpToInclusive="true" />
+        <!-- Тіркелу экранына өту -->
+        <action
+            android:id="@+id/action_loginFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.example.mobileapp.ui.auth.RegisterFragment"
+        android:label="RegisterFragment">
+        <!-- Негізгі экранға (Home) өту -->
+        <action
+            android:id="@+id/action_registerFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/nav_graph"
+            app:popUpToInclusive="true" />
+        <!-- Login экранына қайта оралу -->
+        <action
+            android:id="@+id/action_registerFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <!-- ==================================================== -->
+    <!-- 2. BOTTOM NAVIGATION-ҒА ТИЕСІЛІ НЕГІЗГІ ЭКРАНДАР -->
+    <!-- ==================================================== -->
+
+    <!-- HomeFragment енді BottomNavigationView-дың бір бөлігі -->
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.mobileapp.ui.home.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_chaptersFragment"
+            app:destination="@id/chaptersFragment" />
+    </fragment>
+
+    <!-- CompilerFragment енді BottomNavigationView-дың бір бөлігі -->
+    <fragment
+        android:id="@+id/compilerFragment"
+        android:name="com.example.mobileapp.ui.compiler.CompilerFragment"
+        android:label="Compiler"
+        tools:layout="@layout/fragment_compiler">
+        <action
+            android:id="@+id/action_compilerFragment_to_compilerOutputFragment"
+            app:destination="@id/compilerOutputFragment" />
+    </fragment>
+
+    <!-- LeaderboardFragment (егер бар болса) -->
+    <fragment
+        android:id="@+id/leaderboardFragment"
+        android:name="com.example.mobileapp.ui.leaderboard.LeaderboardFragment"
+        android:label="Leaderboard"
+        tools:layout="@layout/fragment_leaderboard" />
+
+    <!-- ProfileFragment (егер бар болса) -->
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.mobileapp.ui.profile.ProfileFragment"
+        android:label="Profile"
+        tools:layout="@layout/fragment_profile" />
+
+
+    <!-- ЧАТБОТ ФРАГМЕНТІ - КЛАСС АТЫ ТҮЗЕТІЛДІ -->
+    <fragment
+        android:id="@+id/chatbot"
+        android:name="com.example.mobileapp.ui.chatbot.Chatbot"
+        android:label="Chatbot"
+        tools:layout="@layout/fragment_chatbot" />
+
+    <!-- ============================================= -->
+    <!-- 3. БАСҚА ҚОСЫМША ЭКРАНДАР                   -->
+    <!-- ============================================= -->
+
+    <fragment
+        android:id="@+id/chaptersFragment"
+        android:name="com.example.mobileapp.ui.chapters.ChaptersFragment"
+        android:label="ChaptersFragment">
+        <action
+            android:id="@+id/action_chaptersFragment_to_lessonsFragment"
+            app:destination="@id/lessonsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/lessonsFragment"
+        android:name="com.example.mobileapp.ui.lessons.LessonsFragment"
+        android:label="LessonsFragment">
+        <action
+            android:id="@+id/action_lessonsFragment_to_lessonDetailFragment"
+            app:destination="@id/lessonDetailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/lessonDetailFragment"
+        android:name="com.example.mobileapp.ui.lessondetail.LessonDetailFragment"
+        android:label="LessonDetailFragment">
+        <action
+            android:id="@+id/action_lessonDetailFragment_to_compilerFragment"
+            app:destination="@+id/compilerFragment" />
+        <action
+            android:id="@+id/action_lessonDetailFragment_to_quizFragment"
+            app:destination="@id/quizFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/quizFragment"
+        android:name="com.example.mobileapp.ui.quiz.QuizFragment"
+        android:label="QuizFragment" />
+
+    <fragment
+        android:id="@+id/compilerOutputFragment"
+        android:name="com.example.mobileapp.ui.compiler.CompilerOutputFragment"
+        android:label="Compiler Output"
+        tools:layout="@layout/fragment_compiler_output" />
+</navigation>

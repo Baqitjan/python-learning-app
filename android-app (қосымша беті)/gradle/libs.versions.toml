@@ -1,0 +1,77 @@
+[versions]
+androidGradlePlugin = "8.13.1"
+kotlin = "1.9.22"
+ksp = "1.9.22-1.0.17"
+appcompat = "1.7.0"
+activity = "1.9.0"
+constraintlayout = "2.1.4"
+material = "1.12.0"
+room = "2.6.1"
+retrofit = "2.9.0"
+work = "2.9.0"
+glide = "4.16.0"
+cardview = "1.0.0"
+circleimageview = "3.1.0"
+sora-editor-bom = "0.23.4"
+desugarJdkLibs = "2.0.4"
+navigation = "2.7.7"
+markwon = "4.6.2"
+junit = "4.13.2"
+extJunit = "1.1.5"
+espressoCore = "3.5.1"
+gson = "2.11.0"
+
+[libraries]
+
+# --- Core & UI ---
+appcompat = { module = "androidx.appcompat:appcompat", version.ref = "appcompat" }
+activity = { module = "androidx.activity:activity", version.ref = "activity" }
+constraintlayout = { module = "androidx.constraintlayout:constraintlayout", version.ref = "constraintlayout" }
+material = { module = "com.google.android.material:material", version.ref = "material" }
+cardview = { module = "androidx.cardview:cardview", version.ref = "cardview" }
+circleimageview = { module = "de.hdodenhof:circleimageview", version.ref = "circleimageview" }
+
+
+sora-editor-bom = { module = "io.github.Rosemoe.sora-editor:bom", version.ref = "sora-editor-bom" }
+sora-editor-editor = { module = "io.github.Rosemoe.sora-editor:editor" }
+sora-editor-textmate = { module = "io.github.Rosemoe.sora-editor:language-textmate" }
+gson = { module = "com.google.code.gson:gson", version = "2.11.0" }
+desugar-jdk-libs = { module = "com.android.tools:desugar_jdk_libs", version.ref = "desugarJdkLibs" }
+
+# --- Room Persistence ---
+room-runtime = { module = "androidx.room:room-runtime", version.ref = "room" }
+room-ktx = { module = "androidx.room:room-ktx", version.ref = "room" }
+room-compiler = { module = "androidx.room:room-compiler", version.ref = "room" }
+
+# --- Retrofit Networking ---
+retrofit = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofit" }
+retrofit-converter-gson = { module = "com.squareup.retrofit2:converter-gson", version.ref = "retrofit" }
+
+# --- WorkManager Background Processing ---
+work-runtime-ktx = { module = "androidx.work:work-runtime-ktx", version.ref = "work" }
+
+# --- Glide Image Loading ---
+glide = { module = "com.github.bumptech.glide:glide", version.ref = "glide" }
+
+# --- Navigation Component ---
+navigation-fragment = { module = "androidx.navigation:navigation-fragment", version.ref = "navigation" }
+navigation-ui = { module = "androidx.navigation:navigation-ui", version.ref = "navigation" }
+
+# --- Markwon Markdown Display ---
+markwon-core = { module = "io.noties.markwon:core", version.ref = "markwon" }
+markwon-image = { module = "io.noties.markwon:image", version.ref = "markwon" }
+markwon-image-glide = { module = "io.noties.markwon:image-glide", version.ref = "markwon" }
+
+# --- Testing ---
+junit = { module = "junit:junit", version.ref = "junit" }
+ext-junit = { module = "androidx.test.ext:junit", version.ref = "extJunit" }
+espresso-core = { module = "androidx.test.espresso:espresso-core", version.ref = "espressoCore" }
+
+
+[plugins]
+
+android-application = { id = "com.android.application", version.ref = "androidGradlePlugin" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
+#google-gms = { id = "com.google.gms.google-services", version = "4.4.1" }
+

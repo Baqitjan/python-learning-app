@@ -1,0 +1,7 @@
+FROM python:3.12-slim
+
+WORKDIR /sandbox
+
+COPY compiler_sandbox.py .
+
+ENTRYPOINT ["python", "compiler_sandbox.py"]

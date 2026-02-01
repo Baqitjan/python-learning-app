@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/homeFragment"
+        android:icon="@drawable/ic_home"
+        android:title="Home" />
+
+    <item
+        android:id="@+id/compilerFragment"
+        android:icon="@drawable/ic_code_snippet"
+        android:title="Compiler" />
+
+    <item
+        android:id="@+id/chatbot"
+        android:icon="@android:drawable/sym_action_chat"
+        android:title="Chatbot" />
+
+    <item
+        android:id="@+id/leaderboardFragment"
+        android:icon="@drawable/ic_leaderboard"
+        android:title="Leaderboard" />
+
+    <item
+        android:id="@+id/profileFragment"
+        android:icon="@drawable/ic_profile"
+        android:title="Profile" />
+
+</menu>

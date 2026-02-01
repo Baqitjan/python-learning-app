@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Custom Colors -->
+    <color name="red_error">#D32F2F</color>
+    <color name="green_success">#388E3C</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="colorAccent" />
+    <color name="colorLightGray" />
+    <color name="black">#000000</color>
+
+
+    <color name="colorPrimary">#007AFF</color> <!-- Мысалы, көгілдір (User Message Background) -->
+    <color name="colorSecondary">#E0E0E0</color> <!-- Мысалы, сұр (Bot Message Background) -->
+    <color name="gray_dark">#4A4A4A</color>
+    <color name="timestamp_color">#999999</color>
+
+
+    <!-- Array of colors for cards -->
+    <array name="card_colors">
+        <item>#D32F2F</item> <!-- Red -->
+        <item>#C2185B</item> <!-- Pink -->
+        <item>#7B1FA2</item> <!-- Purple -->
+        <item>#512DA8</item> <!-- Deep Purple -->
+        <item>#303F9F</item> <!-- Indigo -->
+        <item>#1976D2</item> <!-- Blue -->
+        <item>#0288D1</item> <!-- Light Blue -->
+        <item>#0097A7</item> <!-- Cyan -->
+        <item>#00796B</item> <!-- Teal -->
+        <item>#388E3C</item> <!-- Green -->
+        <item>#FBC02D</item> <!-- Yellow -->
+        <item>#E64A19</item> <!-- Deep Orange -->
+    </array>
+
+</resources>

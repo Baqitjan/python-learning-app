@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="320" viewBox="0 0 1200 320">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#0b1020"/>
+      <stop offset="50%" stop-color="#0d1b2a"/>
+      <stop offset="100%" stop-color="#06121f"/>
+    </linearGradient>
+
+    <linearGradient id="accent" x1="0" x2="1">
+      <stop offset="0%" stop-color="#22c55e"/>
+      <stop offset="50%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#a855f7"/>
+    </linearGradient>
+
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <style>
+      .title { font: 700 44px 'Segoe UI', Arial, sans-serif; fill: white; }
+      .sub   { font: 500 18px 'Segoe UI', Arial, sans-serif; fill: #cbd5e1; }
+      .mono  { font: 600 18px 'Consolas', 'Courier New', monospace; fill: #e2e8f0; }
+      .chip  { font: 600 14px 'Segoe UI', Arial, sans-serif; fill: #0b1020; }
+      .small { font: 500 13px 'Segoe UI', Arial, sans-serif; fill: #94a3b8; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="320" rx="24" fill="url(#bg)"/>
+
+  <!-- Floating particles -->
+  <g opacity="0.9">
+    <circle cx="120" cy="80" r="4" fill="#38bdf8">
+      <animate attributeName="cy" values="80;60;80" dur="3s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="240" cy="210" r="3" fill="#22c55e">
+      <animate attributeName="cy" values="210;190;210" dur="2.6s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="1040" cy="110" r="4" fill="#a855f7">
+      <animate attributeName="cy" values="110;90;110" dur="3.2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="920" cy="250" r="3" fill="#38bdf8">
+      <animate attributeName="cy" values="250;230;250" dur="2.8s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- Title -->
+  <text x="70" y="95" class="title">Python Learning Mobile App</text>
+  <text x="70" y="130" class="sub">Android (Java) + FastAPI + PostgreSQL • Lessons • Quiz • Progress</text>
+
+  <!-- Animated typing code -->
+  <g transform="translate(70, 170)">
+    <rect x="0" y="0" width="620" height="120" rx="16" fill="#0b1224" stroke="#1f2937"/>
+    <text x="24" y="40" class="mono">print("Hello, Python!")</text>
+
+    <!-- typing cursor -->
+    <rect x="250" y="24" width="10" height="22" fill="url(#accent)">
+      <animate attributeName="opacity" values="1;0;1" dur="0.8s" repeatCount="indefinite"/>
+    </rect>
+
+    <text x="24" y="75" class="mono">user.progress += 1</text>
+    <text x="24" y="105" class="mono">api.post("/quiz/submit")</text>
+
+    <!-- moving highlight -->
+    <rect x="20" y="88" width="580" height="8" rx="4" fill="url(#accent)" opacity="0.12">
+      <animate attributeName="x" values="20;60;20" dur="3.5s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+
+  <!-- Client → Server animation -->
+  <g transform="translate(740, 155)">
+    <!-- Client -->
+    <rect x="0" y="0" width="160" height="70" rx="18" fill="#0b1224" stroke="#1f2937"/>
+    <text x="80" y="42" text-anchor="middle" class="mono">Android</text>
+
+    <!-- Server -->
+    <rect x="260" y="0" width="160" height="70" rx="18" fill="#0b1224" stroke="#1f2937"/>
+    <text x="340" y="42" text-anchor="middle" class="mono">FastAPI</text>
+
+    <!-- DB -->
+    <rect x="130" y="92" width="160" height="70" rx="18" fill="#0b1224" stroke="#1f2937"/>
+    <text x="210" y="134" text-anchor="middle" class="mono">PostgreSQL</text>
+
+    <!-- JSON packet -->
+    <circle cx="165" cy="35" r="10" fill="url(#accent)" filter="url(#glow)">
+      <animate attributeName="cx" values="165;295;165" dur="2.2s" repeatCount="indefinite"/>
+    </circle>
+    <text x="165" y="40" font-size="10" text-anchor="middle" fill="#0b1020">
+      <animate attributeName="x" values="165;295;165" dur="2.2s" repeatCount="indefinite"/>
+      {}
+    </text>
+
+    <!-- Down packet -->
+    <circle cx="210" cy="70" r="9" fill="#22c55e" opacity="0.85" filter="url(#glow)">
+      <animate attributeName="cy" values="70;105;70" dur="2.4s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- Chips -->
+  <g transform="translate(70, 30)">
+    <rect x="0" y="0" width="130" height="28" rx="14" fill="url(#accent)" opacity="0.95"/>
+    <text x="65" y="19" text-anchor="middle" class="chip">Mobile Learning</text>
+
+    <rect x="145" y="0" width="110" height="28" rx="14" fill="#22c55e" opacity="0.85"/>
+    <text x="200" y="19" text-anchor="middle" class="chip">JWT Auth</text>
+
+    <rect x="270" y="0" width="130" height="28" rx="14" fill="#38bdf8" opacity="0.85"/>
+    <text x="335" y="19" text-anchor="middle" class="chip">REST API</text>
+  </g>
+
+  <!-- Footer -->
+  <text x="70" y="305" class="small">Author: Abdirov Bakytzhan • Supervisor: Elepbergenova Aigul U.</text>
+</svg>

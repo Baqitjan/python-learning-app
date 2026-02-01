@@ -1,0 +1,39 @@
+version: '3.8'
+
+services:
+  # ----------------------------------------------------
+  # 1. PostgreSQL Деректер Қоры (db service)
+  # ----------------------------------------------------
+  db:
+    image: postgres:15-alpine
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: Bakytzhan0509as20gu20
+      POSTGRES_DB: python_learning
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+    ports:
+      - "5432:5432" 
+
+  # ----------------------------------------------------
+  # 2. FastAPI Бэк-энд Қосымшасы (backend service)
+  # ----------------------------------------------------
+  backend:
+    build: . 
+    command: uvicorn main:app --host 0.0.0.0 --port 8000 --reload
+    depends_on:
+      - db 
+    ports:
+      - "8000:8000"
+    environment:
+      DATABASE_URL: postgresql+psycopg2://postgres:Bakytzhan0509as20gu20@db:5432/python_learning
+      SECRET_KEY: b3a3c3e8a7d6e8a9d1b3f2c8d7e6a5f4d3c2b1a0e9d8c7b6a5f4d3c2b1a0e9d8
+    volumes:
+      - .:/app # Кодты --reload үшін синхрондау
+      # 2. ⚠️ Docker сокетін контейнерге "байлау"
+      - /var/run/docker.sock:/var/run/docker.sock
+
+volumes:
+  postgres_data:
+

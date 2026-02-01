@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".ui.quiz.QuizFragment">
+
+    <!-- Quiz Content -->
+    <LinearLayout
+        android:id="@+id/quizContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <TextView
+            android:id="@+id/questionNumberTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textSize="16sp"
+            tools:text="Question 1/10" />
+
+        <TextView
+            android:id="@+id/questionTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            tools:text="What is the output of print(2 ** 3)?" />
+
+        <RadioGroup
+            android:id="@+id/answersRadioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp">
+
+            <RadioButton
+                android:id="@+id/answer1RadioButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="Answer 1" />
+
+            <RadioButton
+                android:id="@+id/answer2RadioButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="Answer 2" />
+
+            <RadioButton
+                android:id="@+id/answer3RadioButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="Answer 3" />
+
+            <RadioButton
+                android:id="@+id/answer4RadioButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="Answer 4" />
+
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/nextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginTop="32dp"
+            android:text="Next" />
+    </LinearLayout>
+
+    <!-- Results Content -->
+    <LinearLayout
+        android:id="@+id/resultsContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone"
+        tools:visibility="visible">
+
+        <TextView
+            android:id="@+id/resultTitleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            tools:text="Quiz Completed!" />
+
+        <TextView
+            android:id="@+id/finalScoreTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:textSize="20sp"
+            tools:text="Your score: 8/10" />
+        
+         <TextView
+            android:id="@+id/xpGainedTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textSize="18sp"
+            android:textColor="?attr/colorPrimary"
+            tools:text="+100 XP" />
+
+        <Button
+            android:id="@+id/finishQuizButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Finish" />
+
+    </LinearLayout>
+
+</RelativeLayout>
