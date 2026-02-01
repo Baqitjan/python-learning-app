@@ -94,14 +94,17 @@ graph TD
     A -.->|UI| User
     B -.->|Business Logic| ServerLogic
     C -.->|Data Storage| DataStorage
-` ` `
+```
 
 3.2 Деректер қоры (ER-диаграмма)
+```text
+```mermaid
 erDiagram
     Users ||--o{ UserProgress : has
     Lessons ||--o{ UserProgress : tracks
     Lessons ||--o{ Quizzes : includes
-    
+```
+```
     Users {
         int id PK
         string username
