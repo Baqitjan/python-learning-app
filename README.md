@@ -78,6 +78,11 @@ PostgreSQL — ACID стандартын қолдайтын сенімді де�
 
 ---
 
+<p align="center">
+  <img src="assets/animated-banner-3.svg" width="100%" />
+</p>
+
+
 ## 🏗 Жүйенің архитектурасы
 
 ### 3.1 Клиент-сервер архитектура
@@ -90,9 +95,6 @@ graph TD
     B -.->|Business Logic| ServerLogic;
     C -.->|Data Storage| DataStorage;
 
-<p align="center">
-  <img src="assets/animated-banner-3.svg" width="100%" />
-</p>
 
 3.2 Деректер қоры (ER-диаграмма)
 erDiagram
@@ -227,10 +229,12 @@ FastAPI Documentation — https://fastapi.tiangolo.com
 Retrofit / Room / Glide ресми құжаттамалары
 
 
-screenshots/1.png
-screenshots/2.png
-screenshots/3.png
-screenshots/4.png
-screenshots/5.png
-screenshots/6.png
-screenshots/7.png
+<p align="center">
+  <img src="screenshots/1.png" width="300" />
+  <img src="screenshots/2.png" width="300" />
+  <img src="screenshots/3.png" width="300" />
+  <img src="screenshots/4.png" width="300" />
+  <img src="screenshots/5.png" width="300" />
+  <img src="screenshots/6.png" width="300" />
+  <img src="screenshots/7.png" width="300" />
+</p>
