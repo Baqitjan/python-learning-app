@@ -89,11 +89,11 @@ PostgreSQL — ACID стандартын қолдайтын сенімді де�
 
 ```mermaid
 graph TD
-    A[Android Client (Java)] -->|HTTP/S (JSON)| B(FastAPI Server);
-    B -->|SQL| C[PostgreSQL DB];
-    A -.->|UI| User;
-    B -.->|Business Logic| ServerLogic;
-    C -.->|Data Storage| DataStorage;
+    A[Android Client Java] -->|HTTP/S JSON| B[FastAPI Server]
+    B -->|SQL| C[PostgreSQL DB]
+    A -.->|UI| User
+    B -.->|Business Logic| ServerLogic
+    C -.->|Data Storage| DataStorage
 
 
 3.2 Деректер қоры (ER-диаграмма)
