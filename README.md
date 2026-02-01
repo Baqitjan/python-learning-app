@@ -94,7 +94,7 @@ graph TD
     A -.->|UI| User
     B -.->|Business Logic| ServerLogic
     C -.->|Data Storage| DataStorage
-
+` ` `
 
 3.2 Деректер қоры (ER-диаграмма)
 erDiagram
